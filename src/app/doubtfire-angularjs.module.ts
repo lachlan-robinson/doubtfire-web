@@ -113,7 +113,6 @@ import 'build/src/app/units/states/edit/edit.js';
 import 'build/src/app/units/states/rollover/directives/unit-dates-selector/unit-dates-selector.js';
 import 'build/src/app/units/states/rollover/directives/directives.js';
 import 'build/src/app/units/states/rollover/rollover.js';
-import 'build/src/app/units/states/index/index.js';
 import 'build/src/app/units/states/students-list/students-list.js';
 import 'build/src/app/units/states/analytics/analytics.js';
 import 'build/src/app/common/filters/filters.js';
@@ -146,6 +145,7 @@ import 'build/src/i18n/resources-locale_en-AU.js';
 import 'build/src/i18n/resources-locale_en-GB.js';
 //#endregion
 
+import {UnitIndexStateComponent} from 'src/app/units/states/index/unit-index-state.component';
 import {AboutDoubtfireModal} from 'src/app/common/modals/about-doubtfire-modal/about-doubtfire-modal.component';
 import {TaskCommentComposerComponent} from 'src/app/tasks/task-comment-composer/task-comment-composer.component';
 import {DoubtfireConstants} from 'src/app/config/constants/doubtfire-constants';
@@ -308,6 +308,11 @@ DoubtfireAngularJSModule.factory(
 DoubtfireAngularJSModule.factory('CreateNewUnitModal', downgradeInjectable(CreateNewUnitModal));
 
 // directive -> component
+DoubtfireAngularJSModule.directive(
+  'unitsIndexState',
+  downgradeComponent({component: UnitIndexStateComponent}),
+);
+
 DoubtfireAngularJSModule.directive(
   'taskCommentComposer',
   downgradeComponent({component: TaskCommentComposerComponent}),
