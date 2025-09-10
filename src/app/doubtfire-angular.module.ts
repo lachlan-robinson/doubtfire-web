@@ -259,6 +259,7 @@ import {GradeTaskModalComponent} from './tasks/modals/grade-task-modal/grade-tas
 import {PrivacyPolicy} from './config/privacy-policy/privacy-policy';
 import {AchievementCustomBarChartComponent} from './visualisations/achievement-custom-bar-chart/achievement-custom-bar-chart/achievement-custom-bar-chart.component';
 
+
 // See https://stackoverflow.com/questions/55721254/how-to-change-mat-datepicker-date-format-to-dd-mm-yyyy-in-simplest-way/58189036#58189036
 const MY_DATE_FORMAT = {
   parse: {
@@ -272,6 +273,7 @@ const MY_DATE_FORMAT = {
   },
 };
 import {UnitStudentEnrolmentModalComponent} from './units/modals/unit-student-enrolment-modal/unit-student-enrolment-modal.component';
+import {OutcomeService} from './api/services/outcome.service';
 
 @NgModule({
   // Components we declare
@@ -427,6 +429,7 @@ import {UnitStudentEnrolmentModalComponent} from './units/modals/unit-student-en
     FileDownloaderService,
     CheckForUpdateService,
     TaskOutcomeAlignmentService,
+    OutcomeService,
     visualisationsProvider,
     commentsModalProvider,
     rootScopeProvider,

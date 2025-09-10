@@ -69,7 +69,7 @@ import 'build/src/app/projects/states/dashboard/directives/student-task-list/stu
 import 'build/src/app/projects/states/dashboard/directives/directives.js';
 import 'build/src/app/projects/states/dashboard/directives/task-dashboard/task-dashboard.js';
 import 'build/src/app/projects/states/dashboard/dashboard.js';
-import 'build/src/app/projects/states/outcomes/outcomes.js';
+import 'build/src/app/projects/states/s/outcomes.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-review-step/portfolio-review-step.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-learning-summary-report-step/portfolio-learning-summary-report-step.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-add-extra-files-step/portfolio-add-extra-files-step.js';
@@ -119,7 +119,6 @@ import 'build/src/app/common/modals/modals.js';
 import 'build/src/app/common/file-uploader/file-uploader.js';
 import 'build/src/app/common/common.js';
 import 'build/src/app/common/services/listener-service.js';
-import 'build/src/app/common/services/outcome-service.js';
 import 'build/src/app/common/services/services.js';
 import 'build/src/app/common/services/recorder-service.js';
 import 'build/src/app/common/services/media-service.js';
@@ -224,6 +223,7 @@ import {GradeService} from './common/services/grade.service';
 import {TaskScormCardComponent} from './projects/states/dashboard/directives/task-dashboard/directives/task-scorm-card/task-scorm-card.component';
 import {UnitStudentEnrolmentModalService} from './units/modals/unit-student-enrolment-modal/unit-student-enrolment-modal.service';
 import {PrivacyPolicy} from './config/privacy-policy/privacy-policy';
+import {OutcomeService} from './api/services/outcome.service';
 import {AchievementCustomBarChartComponent} from './visualisations/achievement-custom-bar-chart/achievement-custom-bar-chart/achievement-custom-bar-chart.component';
 
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
@@ -277,6 +277,7 @@ DoubtfireAngularJSModule.factory(
   'newLearningOutcomeService',
   downgradeInjectable(LearningOutcomeService),
 );
+DoubtfireAngularJSModule.factory('outcomeService', downgradeInjectable(OutcomeService));
 DoubtfireAngularJSModule.factory('emojiService', downgradeInjectable(EmojiService));
 DoubtfireAngularJSModule.factory('gradeService', downgradeInjectable(GradeService));
 DoubtfireAngularJSModule.factory(
@@ -478,7 +479,6 @@ DoubtfireAngularJSModule.directive(
   'unauthorised',
   downgradeComponent({component: UnauthorisedComponent}),
 );
-
 DoubtfireAngularJSModule.directive(
   'fAchievementCustomBarChartComponent',
   downgradeComponent({component: AchievementCustomBarChartComponent}),
