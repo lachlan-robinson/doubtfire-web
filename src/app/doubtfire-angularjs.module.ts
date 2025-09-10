@@ -69,7 +69,7 @@ import 'build/src/app/projects/states/dashboard/directives/student-task-list/stu
 import 'build/src/app/projects/states/dashboard/directives/directives.js';
 import 'build/src/app/projects/states/dashboard/directives/task-dashboard/task-dashboard.js';
 import 'build/src/app/projects/states/dashboard/dashboard.js';
-import 'build/src/app/projects/states/outcomes/outcomes.js';
+import 'build/src/app/projects/states/s/outcomes.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-review-step/portfolio-review-step.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-learning-summary-report-step/portfolio-learning-summary-report-step.js';
 import 'build/src/app/projects/states/portfolio/directives/portfolio-add-extra-files-step/portfolio-add-extra-files-step.js';
@@ -224,6 +224,7 @@ import {TaskScormCardComponent} from './projects/states/dashboard/directives/tas
 import {UnitStudentEnrolmentModalService} from './units/modals/unit-student-enrolment-modal/unit-student-enrolment-modal.service';
 import {PrivacyPolicy} from './config/privacy-policy/privacy-policy';
 import {OutcomeService} from './api/services/outcome.service';
+import {AchievementCustomBarChartComponent} from './visualisations/achievement-custom-bar-chart/achievement-custom-bar-chart/achievement-custom-bar-chart.component';
 
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
   'doubtfire.config',
@@ -477,6 +478,10 @@ DoubtfireAngularJSModule.directive('newFUnits', downgradeComponent({component: F
 DoubtfireAngularJSModule.directive(
   'unauthorised',
   downgradeComponent({component: UnauthorisedComponent}),
+);
+DoubtfireAngularJSModule.directive(
+  'fAchievementCustomBarChartComponent',
+  downgradeComponent({component: AchievementCustomBarChartComponent}),
 );
 
 // Global configuration
